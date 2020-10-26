@@ -31,7 +31,5 @@ public class CountNoOfCells
 		int count  = allcells.size();
 		System.out.println(count+" Cells");
 		driver.quit();
-		
 	}
-
 }

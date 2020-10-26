@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Test.ActiTimeCreateChart">
+      <class name="Test.Demo">
         <methods>
-          <include name="actiTimeCreateChart"/>
+          <include name="testA"/>
+          <include name="Postcondition"/>
+          <include name="precondition"/>
         </methods>
-      </class> <!-- Test.ActiTimeCreateChart -->
+      </class> <!-- Test.Demo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

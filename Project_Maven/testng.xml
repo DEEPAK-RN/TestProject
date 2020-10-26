@@ -2,8 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test name="Test">
-    <packages>
-      <package name="handling_Tables"/>
-    </packages>
+    <classes>
+      <class name="Test.Ae1_Demo"/>
+    
+      <class name="Test.Demo"/>
+    
+    </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

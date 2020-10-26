@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
-    <line>
-      <![CDATA[Hiii Hellooo]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="73" started-at="2020-07-31T09:44:22Z" finished-at="2020-07-31T09:44:22Z">
+  <suite name="Default suite" duration-ms="22364" started-at="2020-10-26T03:20:09Z" finished-at="2020-10-26T03:20:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="73" started-at="2020-07-31T09:44:22Z" finished-at="2020-07-31T09:44:22Z">
-      <class name="Test.Ae1_Demo">
-        <test-method status="PASS" signature="testA()[pri:0, instance:Test.Ae1_Demo@27efef64]" name="testA" duration-ms="16" started-at="2020-07-31T09:44:22Z" finished-at="2020-07-31T09:44:22Z">
+    <test name="Default test" duration-ms="22364" started-at="2020-10-26T03:20:09Z" finished-at="2020-10-26T03:20:31Z">
+      <class name="Database.MySqlDemo">
+        <test-method status="PASS" signature="testA()[pri:0, instance:Database.MySqlDemo@1a968a59]" name="testA" duration-ms="22285" started-at="2020-10-26T03:20:09Z" finished-at="2020-10-26T03:20:31Z">
           <reporter-output>
-            <line>
-              <![CDATA[Hiii Hellooo]]>
-            </line>
           </reporter-output>
         </test-method> <!-- testA -->
-      </class> <!-- Test.Ae1_Demo -->
+      </class> <!-- Database.MySqlDemo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -5,7 +5,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
 import Generic.ReadData;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -18,8 +20,8 @@ public class ActiTimeCreateChart
 		String un = ReadData.getData("./src/test/resources/Data/input.xlsx", "Sheet1",0,0);
 		String pw = ReadData.getData("./src/test/resources/Data/input.xlsx", "Sheet1",0,1);
 //	1.Launch the Browser.	
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
+		WebDriverManager.edgedriver().setup();
+		WebDriver driver = new EdgeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://demo.actitime.com/");
@@ -37,9 +39,9 @@ public class ActiTimeCreateChart
 		Thread.sleep(1000);
 //	5.Click on Create Chart.
 		driver.findElement(By.xpath("//span[contains(text(),'Create Chart')]")).click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 //	6.Click on 'Add to DashBoard'		
-		driver.findElement(By.xpath("/html[1]/body[1]/div[10]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[2]/div[1]")).click();
+		driver.findElement(By.xpath("//div[@class='addToDashboard']")).click();
 		Thread.sleep(1000);
 //	7.Enter the chart name which is provided.		
 		driver.findElement(By.xpath("//div[contains(@class,'saveConfigurationControl newConfigEdit')]//input[contains(@placeholder,'Enter Chart Name')]")).sendKeys("Deepak's Timing's Chart");
@@ -50,9 +52,9 @@ public class ActiTimeCreateChart
 //	9.Click on close button.		
 		driver.findElement(By.id("createChartLightbox_cancelBtn")).click();
 		Thread.sleep(1000);
-// To scroll the web page	
+// To scroll the web page 
 		 JavascriptExecutor js = (JavascriptExecutor) driver;
-// This  will scroll down the page by  1000 pixel vertical	
+// call the executeScript method, This  will scroll down the page by  1000 pixel vertical	
 	     js.executeScript("window.scrollBy(0,1000)");
-	}
+	  }
 }
